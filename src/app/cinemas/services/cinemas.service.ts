@@ -8,7 +8,6 @@ export class CinemasService {
   ) {
     'ngInject';
   }
-
   getAll() {
     return this.$http.get('https://drafthouse.com/s/mother/v1/page/market/main/austin');
   }

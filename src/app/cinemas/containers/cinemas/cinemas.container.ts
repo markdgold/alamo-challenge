@@ -20,6 +20,7 @@ class CinemasController {
   getCinemas() {
     this.cinemasService.getAll().then(
       resp => {
+        console.log(resp);
         this.cinemas = resp;
       }
     );
@@ -30,7 +31,7 @@ export class CinemasContainer implements angular.IComponentOptions {
   static selector = 'cinemas';
   static controller = CinemasController;
   static template = `
-    <h1>hello cinemas</h1>
+    <h1>hello {{$ctrl.location}} cinemas</h1>
     <cinema-list></cinema-list>
   `;
 }
