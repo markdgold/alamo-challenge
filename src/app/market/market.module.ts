@@ -20,6 +20,7 @@ import { CinemasService } from './services/cinemas.service';
  * Import Module Routing
  */
 import { routing } from './market.routes';
+import { FilmList } from './components/film-list/film-list.component';
 
 export const moduleName =
   angular.module('application.market', [
@@ -30,6 +31,7 @@ export const moduleName =
    * Register Module Components
    */
   .component(CinemaList.selector, CinemaList)
+  .component(FilmList.selector, FilmList)
 
   /**
    * Register Module Containers

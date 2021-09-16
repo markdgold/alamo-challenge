@@ -1,5 +1,5 @@
 <div class="cinema-list">
   <ul>
-    <li ng-repeat="cinema in $ctrl.cinemas">{{cinema.name}}</li>
+    <li ng-repeat="cinema in $ctrl.cinemas" ng-click="$ctrl.selectCinema(cinema.id)">{{cinema.name}}</li>
   </ul>
 </div>

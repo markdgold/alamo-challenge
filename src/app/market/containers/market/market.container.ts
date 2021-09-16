@@ -4,6 +4,7 @@ import './market.container.scss';
 
 class MarketController {
   cinemas: any[];
+  films: any[];
   location: string;
   constructor(
     private cinemasService: CinemasService,
@@ -15,7 +16,6 @@ class MarketController {
 
   $onInit() {
     this.getCinemas();
-    this.getSessions();
   }
 
   getCinemas() {
@@ -27,13 +27,17 @@ class MarketController {
       );
   }
 
-  getSessions() {
-    this.cinemasService.getFilms(this.location, '0003')
+  getFilms(cinemaId: string) {
+    this.cinemasService.getFilms(this.location, cinemaId)
       .then(
         resp => {
-          console.log(resp.data);
+          this.films = resp.data;
         }
       );
+  }
+
+  setCinemaId(event: {cinemaId: string}) {
+    this.getFilms(event.cinemaId);
   }
 }
 

@@ -1,3 +1,4 @@
 <h1>hello {{$ctrl.location}} cinemas</h1>
 
-<cinema-list cinemas="$ctrl.cinemas"></cinema-list>
+<cinema-list cinemas="$ctrl.cinemas" cinema-selected="$ctrl.setCinemaId($event)"></cinema-list>
+<film-list films="$ctrl.films"></film-list>
