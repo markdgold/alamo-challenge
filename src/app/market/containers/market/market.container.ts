@@ -6,6 +6,7 @@ class MarketController {
   cinemas: any[];
   films: any[];
   location: string;
+  selectedCinemaId: string;
   constructor(
     private cinemasService: CinemasService,
     $stateParams: any
@@ -36,7 +37,8 @@ class MarketController {
       );
   }
 
-  setCinemaId(event: {cinemaId: string}) {
+  onSelectCinema(event: {cinemaId: string}) {
+    this.selectedCinemaId = event.cinemaId;
     this.getFilms(event.cinemaId);
   }
 }

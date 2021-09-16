@@ -1,5 +1,5 @@
 <div>
   <ul>
-    <li ng-repeat="film in $ctrl.films">{{film.filmName}}</li>
+    <li ng-repeat="film in $ctrl.films"><a ng-href="https://drafthouse.com/{{$ctrl.location}}/show/{{film.filmSlug}}?cinemaId={{$ctrl.cinema}}" target="_blank">{{film.filmName}}</a></li>
   </ul>
 </div>
