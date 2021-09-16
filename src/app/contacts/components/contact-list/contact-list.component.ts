@@ -19,8 +19,8 @@ class ContactListController {
 export class ContactList implements angular.IComponentOptions {
   static selector = 'contactList';
   static bindings = {
-    contacts: '<',
-    contactRemoved: '&'
+    contacts: '<', // input also @ string input
+    contactRemoved: '&' // output
   };
   static controller = ContactListController;
   static template = `

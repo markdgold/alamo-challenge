@@ -1,3 +1,4 @@
+
 export class ContactsService {
   static selector = 'contactsService';
   contacts: { id: number, lastName: string, firstName: string }[] = [
@@ -5,7 +6,8 @@ export class ContactsService {
   ];
 
   constructor(
-      private $q: angular.IQService
+      private $q: angular.IQService,
+      private $http: angular.IHttpService
   ) {
     'ngInject';
   }
