@@ -4,7 +4,7 @@ export const routing = ($stateProvider: angular.ui.IStateProvider) => {
   'ngInject';
   $stateProvider
     .state('cinema', {
-      url: '/:id',
+      url: '^/:id',
       parent: 'app',
       component: CinemasContainer.selector
     });

@@ -5,9 +5,9 @@ export const routing = ($stateProvider: angular.ui.IStateProvider, $urlRouterPro
   $stateProvider
     .state('app', {
       abstract: true,
-      url: '/alamo',
+      url: '/',
       component: App.selector
     });
 
-    $urlRouterProvider.otherwise('/alamo/austin');
+    $urlRouterProvider.otherwise('/austin');
 };
