@@ -1,5 +1,5 @@
-<div class="cinema-list">
-  <ul>
-    <li ng-repeat="cinema in $ctrl.cinemas" ng-click="$ctrl.selectCinema(cinema.id)">{{cinema.name}}</li>
-  </ul>
+<h2>Select theater</h2>
+<div class="button-container">
+  <div class="cinema-btn" ng-repeat="cinema in $ctrl.cinemas" ng-click="$ctrl.selectCinema(cinema.id)">{{cinema.name}}
+  </div>
 </div>

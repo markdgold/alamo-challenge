@@ -1,13 +1,15 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+
 // color definitions
 $black: #090909;
 $white: #FFFFFF;
 $grey: rgba(9, 9, 9, 0.6);
 $gold: #f0b323;
+$borderRadius: 4px;
 
 body {
-    background-color: #eee;
+    background-color: #E5E5E5;
     p,
     h1,
     h2,

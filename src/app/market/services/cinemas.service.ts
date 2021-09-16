@@ -17,7 +17,7 @@ export class CinemasService {
     return this.$http.get<any>(`${this.baseUrl}/${citySlug}`, {
       transformResponse: (data) => {
         if (!!JSON.parse(data).error) {
-          throw JSON.parse(data.error);
+          throw data;
         }
         return JSON.parse(data).data.market.cinemas;
       }
@@ -27,8 +27,8 @@ export class CinemasService {
   getFilms(citySlug: string, cinemaId: string): angular.IHttpPromise<any>  {
     return this.$http.get(`${this.baseUrl}/${citySlug}`, {
       transformResponse: (data) => {
-        if (!!JSON.parse(data.error)) {
-          throw JSON.parse(data.error);
+        if (!!JSON.parse(data).error) {
+          throw data;
         }
         const filteredByCinemaList: any[] = JSON.parse(data).data.sessions
           .filter((session: { [key: string]: any }) => {

@@ -5,8 +5,18 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0px 2px 4px rgba(24, 17, 3, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(24, 17, 3, 0.2);
-  border-radius: 4px;
+  border-radius: $borderRadius;
   background: $white;
-  max-width: 752px;
+  max-width: 1100px;
   padding: 32px 96px;
+  h1 {
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 1.5px;
+    margin-bottom: 52px;
+  }
+  h2 {
+    color: $grey;
+    letter-spacing: .5px;
+  }
 }

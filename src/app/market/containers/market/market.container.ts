@@ -28,7 +28,8 @@ class MarketController {
       )
       .catch(
         err => {
-          alert('Could not get cinemas');
+          const error = JSON.parse(err).error;
+          alert(`${error.errorCode.code}: ${error.description}`);
         }
       );
   }
@@ -39,7 +40,8 @@ class MarketController {
           this.films = resp.data;
         })
       .catch(err => {
-        alert('Couuld not get films');
+        const error = JSON.parse(err).error;
+          alert(`${error.errorCode.code}: ${error.description}`);
       });
   }
 
