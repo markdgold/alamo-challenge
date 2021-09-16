@@ -25,19 +25,25 @@ class MarketController {
         resp => {
           this.cinemas = resp.data;
         }
+      )
+      .catch(
+        err => {
+          alert('Could not get cinemas');
+        }
       );
   }
 
   getFilms(cinemaId: string) {
     this.cinemasService.getFilms(this.location, cinemaId)
-      .then(
-        resp => {
+      .then(resp => {
           this.films = resp.data;
-        }
-      );
+        })
+      .catch(err => {
+        alert('Couuld not get films');
+      });
   }
 
-  onSelectCinema(event: {cinemaId: string}) {
+  onSelectCinema(event: { cinemaId: string }) {
     this.selectedCinemaId = event.cinemaId;
     this.getFilms(event.cinemaId);
   }

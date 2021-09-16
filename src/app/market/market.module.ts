@@ -24,26 +24,26 @@ import { FilmList } from './components/film-list/film-list.component';
 
 export const moduleName =
   angular.module('application.market', [
-      'ui.router'
+    'ui.router'
   ])
 
-  /**
-   * Register Module Components
-   */
-  .component(CinemaList.selector, CinemaList)
-  .component(FilmList.selector, FilmList)
+    /**
+     * Register Module Components
+     */
+    .component(CinemaList.selector, CinemaList)
+    .component(FilmList.selector, FilmList)
 
-  /**
-   * Register Module Containers
-   */
-  .component(MarketContainer.selector, MarketContainer)
+    /**
+     * Register Module Containers
+     */
+    .component(MarketContainer.selector, MarketContainer)
 
-  /**
-   * Register Module Services
-   */
-  .service(CinemasService.selector, CinemasService)
-  /**
-   * Register Module Configuration
-   */
-  .config(routing)
-  .name;
+    /**
+     * Register Module Services
+     */
+    .service(CinemasService.selector, CinemasService)
+    /**
+     * Register Module Configuration
+     */
+    .config(routing)
+    .name;
