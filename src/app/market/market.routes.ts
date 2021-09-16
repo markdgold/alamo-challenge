@@ -1,4 +1,4 @@
-import { CinemasContainer } from './containers/cinemas/cinemas.container';
+import { MarketContainer } from './containers/market/market.container';
 
 export const routing = ($stateProvider: angular.ui.IStateProvider) => {
   'ngInject';
@@ -6,6 +6,6 @@ export const routing = ($stateProvider: angular.ui.IStateProvider) => {
     .state('cinema', {
       url: '^/:id',
       parent: 'app',
-      component: CinemasContainer.selector
+      component: MarketContainer.selector
     });
 };

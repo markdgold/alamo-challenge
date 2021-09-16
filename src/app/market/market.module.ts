@@ -9,7 +9,7 @@ import { CinemaList } from './components/cinema-list/cinema-list.component';
 /**
  * Import Module Containers
  */
-import { CinemasContainer } from './containers/cinemas/cinemas.container';
+import { MarketContainer } from './containers/market/market.container';
 
 /**
  * Import Module Services
@@ -19,10 +19,10 @@ import { CinemasService } from './services/cinemas.service';
 /**
  * Import Module Routing
  */
-import { routing } from './cinemas.routes';
+import { routing } from './market.routes';
 
 export const moduleName =
-  angular.module('application.cinemas', [
+  angular.module('application.market', [
       'ui.router'
   ])
 
@@ -34,7 +34,7 @@ export const moduleName =
   /**
    * Register Module Containers
    */
-  .component(CinemasContainer.selector, CinemasContainer)
+  .component(MarketContainer.selector, MarketContainer)
 
   /**
    * Register Module Services

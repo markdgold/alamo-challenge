@@ -3,6 +3,7 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
+    "downlevelIteration": true,
     "lib": [
       "es6",
       "dom"
