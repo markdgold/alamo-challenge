@@ -1,9 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap");
 
 // color definitions
 $black: #090909;
-$white: #FFFFFF;
+$white: #ffffff;
 $grey: rgba(9, 9, 9, 0.6);
 $gold: #f0b323;
 $borderRadius: 4px;
@@ -12,13 +12,14 @@ $smBreakPoint: "(max-width: 725px)";
 $xsBreakPoint: "(max-width: 570px)";
 
 body {
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     p,
     h1,
     h2,
     span,
-    div {
-        font-family: 'Nunito Sans', sans-serif;
+    div,
+    button {
+        font-family: "Nunito Sans", sans-serif;
         text-transform: uppercase;
     }
     h1 {

@@ -10,8 +10,11 @@ film-list {
     @media #{$xsBreakPoint} {
       margin-top: 24px;
     }
-    h2 .cinema-name {
-      color: $black;
+    h2 {
+      margin-bottom: 24px;
+      .cinema-name {
+        color: $black;
+      }
     }
     h3 {
       color: $grey;
@@ -25,6 +28,7 @@ film-list {
       padding-left: 48px;
       color: $black;
       font-size: 22px;
+      line-height: 18px;
       width: 100%;
       margin-bottom: 16px;
       text-decoration: none;
@@ -35,10 +39,10 @@ film-list {
         font-size: 16px;
         padding-left: 15px;
       }
-      .svg-wrapper{
+      .svg-wrapper {
         display: inline-block;
         width: 20px;
-        height: 33px;
+        height: 16px;
         margin: 0 15px;
       }
       &:hover {
