@@ -1,13 +1,16 @@
 import './cinema-list.component.scss';
 import angular = require('angular');
+import { ICinemaMin } from '../../models/cinema';
 
 class CinemaListController {
-  cinemas: [];
-  cinemaSelected: ($event: {$event: {cinemaId: string}}) => void;
-  selectCinema(cinemaId: string) {
+  cinemas: ICinemaMin[];
+  selectedCinema: ICinemaMin;
+  cinemaSelected: ($event: {$event: {cinema: ICinemaMin}}) => void;
+  selectCinema(cinema: ICinemaMin) {
+    this.selectedCinema = cinema;
     this.cinemaSelected({
       $event: {
-        cinemaId
+        cinema
       }
     });
   }

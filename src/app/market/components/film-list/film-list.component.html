@@ -1,5 +1,7 @@
-<div>
-  <ul>
-    <li ng-repeat="film in $ctrl.films"><a ng-href="https://drafthouse.com/{{$ctrl.location}}/show/{{film.filmSlug}}?cinemaId={{$ctrl.cinema}}" target="_blank">{{film.filmName}}</a></li>
-  </ul>
-</div>
+<h2>Films playing at <span>lakeline</span></h2>
+<ul>
+  <li ng-repeat="film in $ctrl.films"><a
+      ng-href="https://drafthouse.com/{{$ctrl.location}}/show/{{film.filmSlug}}?cinemaId={{$ctrl.cinema}}"
+      target="_blank">{{film.filmName}}</a></li>
+</ul>
+<h3 ng-if="$ctrl.films.length === 0">NO SHOWTIMES AVAILABLE</h3>

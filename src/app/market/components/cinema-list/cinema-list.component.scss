@@ -15,6 +15,7 @@ cinema-list {
     flex-wrap: wrap;
     justify-content: space-between;
     .cinema-btn {
+      background: $white;
       border: 1px solid $black;
       border-radius: $borderRadius;
       padding: 13px 16px;
@@ -27,8 +28,12 @@ cinema-list {
       max-width: 32%;
       flex-grow: 1;
       margin-bottom: 16px;
-      &:hover{
-        
+      &:hover, &:focus, &.active{
+        background-color: $gold;
+        border-color: $gold;
+      }
+      &:focus {
+        outline: none;
       }
     }
   }

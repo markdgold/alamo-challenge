@@ -1,12 +1,14 @@
 import angular = require('angular');
+import { ICinemaMin } from '../../models/cinema';
+import { ISessionMin } from '../../models/session';
 import { CinemasService } from '../../services/cinemas.service';
 import './market.container.scss';
 
 class MarketController {
-  cinemas: any[];
-  films: any[];
+  cinemas: ICinemaMin[];
+  films: ISessionMin[];
   location: string;
-  selectedCinemaId: string;
+  selectedCinema: ICinemaMin;
   constructor(
     private cinemasService: CinemasService,
     $stateParams: any
@@ -45,9 +47,9 @@ class MarketController {
       });
   }
 
-  onSelectCinema(event: { cinemaId: string }) {
-    this.selectedCinemaId = event.cinemaId;
-    this.getFilms(event.cinemaId);
+  onSelectCinema(event: { cinema: ICinemaMin}) {
+    this.selectedCinema = event.cinema;
+    this.getFilms(event.cinema.id);
   }
 }
 

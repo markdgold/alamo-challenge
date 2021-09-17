@@ -1,5 +1,7 @@
 import { IHttpResponse } from 'angular';
 import angular = require('angular');
+import { ICinemaMin } from '../models/cinema';
+import { ISessionMin } from '../models/session';
 
 export class CinemasService {
   static selector = 'cinemasService';
@@ -9,11 +11,8 @@ export class CinemasService {
   ) {
     'ngInject';
   }
-  getAll(): angular.IHttpPromise<any> {
-    return this.$http.get<any>(this.baseUrl + '/austin');
-  }
 
-  getCinemasByCity(citySlug: string): angular.IHttpPromise<any>  {
+  getCinemasByCity(citySlug: string): angular.IHttpPromise<ICinemaMin[]>  {
     return this.$http.get<any>(`${this.baseUrl}/${citySlug}`, {
       transformResponse: (data) => {
         if (!!JSON.parse(data).error) {
@@ -24,7 +23,7 @@ export class CinemasService {
     });
   }
 
-  getFilms(citySlug: string, cinemaId: string): angular.IHttpPromise<any>  {
+  getFilms(citySlug: string, cinemaId: string): angular.IHttpPromise<ISessionMin[]>  {
     return this.$http.get(`${this.baseUrl}/${citySlug}`, {
       transformResponse: (data) => {
         if (!!JSON.parse(data).error) {
