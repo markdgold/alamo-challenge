@@ -14,6 +14,9 @@ class CinemaListController {
       }
     });
   }
+  $onChanges() {
+    console.log('changes');
+  }
 }
 
 
