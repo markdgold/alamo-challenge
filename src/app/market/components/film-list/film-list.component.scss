@@ -7,6 +7,9 @@ film-list {
     width: 100%;
     align-items: flex-start;
     margin-top: 64px;
+    @media #{$xsBreakPoint} {
+      margin-top: 24px;
+    }
     h2 .cinema-name {
       color: $black;
     }
@@ -28,8 +31,15 @@ film-list {
       display: inline-flex;
       justify-content: space-between;
       align-items: center;
-      .cart-icon {
-        margin-right: 15px;
+      @media #{$medBreakPoint} {
+        font-size: 16px;
+        padding-left: 15px;
+      }
+      .svg-wrapper{
+        display: inline-block;
+        width: 20px;
+        height: 33px;
+        margin: 0 15px;
       }
       &:hover {
         background-color: $black;

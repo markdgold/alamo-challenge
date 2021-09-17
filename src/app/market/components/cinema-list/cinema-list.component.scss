@@ -10,11 +10,20 @@ cinema-list {
   }
   .button-container{
     display: inline-flex;
-    width: 100%;
+    width: calc(100% + 16px);
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: s;
+    margin-left: -16px;
     .cinema-btn {
+      @media #{$medBreakPoint}{
+          width: 46%;
+          max-width: 46%;
+      }
+      @media #{$smBreakPoint} {
+        width: 100%;
+        max-width: 100%;
+      }
       background: $white;
       border: 1px solid $black;
       border-radius: $borderRadius;
@@ -24,9 +33,10 @@ cinema-list {
       letter-spacing: 0.5px;
       cursor: pointer;
       text-align: center;
-      min-width: 250px;
-      max-width: 32%;
+      width: 248px;
+      max-width: 248px;
       flex-grow: 1;
+      margin-left: 16px;
       margin-bottom: 16px;
       &:hover, &:focus, &.active{
         background-color: $gold;

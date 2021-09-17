@@ -7,6 +7,9 @@ $white: #FFFFFF;
 $grey: rgba(9, 9, 9, 0.6);
 $gold: #f0b323;
 $borderRadius: 4px;
+$medBreakPoint: "(max-width: 970px)";
+$smBreakPoint: "(max-width: 725px)";
+$xsBreakPoint: "(max-width: 570px)";
 
 body {
     background-color: #E5E5E5;
