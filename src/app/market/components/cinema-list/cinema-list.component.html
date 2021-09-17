@@ -1,5 +1,5 @@
 <h2>Select theater</h2>
 <div class="button-container">
-  <button ng-class="{active: $ctrl.selectedCinemaId === cinema.id}" class="cinema-btn" ng-repeat="cinema in $ctrl.cinemas" ng-click="$ctrl.selectCinema(cinema.id)">{{cinema.name}}
+  <button ng-class="{active: $ctrl.selectedCinemaId === cinema.id}" class="cinema-btn" ng-repeat="cinema in $ctrl.cinemas" ng-click="$ctrl.selectCinema(cinema)">{{cinema.name}}
   </button>
 </div>

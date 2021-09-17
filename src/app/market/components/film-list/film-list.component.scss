@@ -1,9 +1,45 @@
-@import '../../../../index.scss';
-
-film-list{
-  margin-top: 64px;
-  h3{
-    color: $grey;
-    font-size: 26px;
+@import "../../../../index.scss";
+film-list {
+  width: 100%;
+  .films-list-container {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 64px;
+    h2 .cinema-name {
+      color: $black;
+    }
+    h3 {
+      color: $grey;
+      font-size: 26px;
+      margin-bottom: 24px;
+    }
+    a {
+      border: 1px solid $black;
+      border-radius: $borderRadius;
+      padding: 15px 0px;
+      padding-left: 48px;
+      color: $black;
+      font-size: 22px;
+      width: 100%;
+      margin-bottom: 16px;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      .cart-icon {
+        margin-right: 15px;
+      }
+      &:hover {
+        background-color: $black;
+        color: $gold;
+        .cart-icon {
+          path {
+            fill: $gold !important;
+          }
+        }
+      }
+    }
   }
 }

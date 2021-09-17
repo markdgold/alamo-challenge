@@ -11,7 +11,7 @@ class MarketController {
   selectedCinema: ICinemaMin;
   constructor(
     private cinemasService: CinemasService,
-    $stateParams: any
+    $stateParams: { id: string }
   ) {
     'ngInject';
     this.location = $stateParams.id;
@@ -39,15 +39,15 @@ class MarketController {
   getFilms(cinemaId: string) {
     this.cinemasService.getFilms(this.location, cinemaId)
       .then(resp => {
-          this.films = resp.data;
-        })
+        this.films = resp.data;
+      })
       .catch(err => {
         const error = JSON.parse(err).error;
-          alert(`${error.errorCode.code}: ${error.description}`);
+        alert(`${error.errorCode.code}: ${error.description}`);
       });
   }
 
-  onSelectCinema(event: { cinema: ICinemaMin}) {
+  onSelectCinema(event: { cinema: ICinemaMin }) {
     this.selectedCinema = event.cinema;
     this.getFilms(event.cinema.id);
   }
